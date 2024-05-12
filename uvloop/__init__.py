@@ -27,14 +27,14 @@ def new_event_loop() -> Loop:
 
 def install() -> None:
     """A helper function to install uvloop policy."""
-    if _sys.version_info[:2] >= (3, 12):
-        _warnings.warn(
-            'uvloop.install() is deprecated in favor of uvloop.run() '
-            'starting with Python 3.12.',
-            DeprecationWarning,
-            stacklevel=1,
-        )
-    __asyncio.set_event_loop_policy(EventLoopPolicy())
+    # if _sys.version_info[:2] >= (3, 12):
+    #     _warnings.warn(
+    #         'uvloop.install() is deprecated in favor of uvloop.run() '
+    #         'starting with Python 3.12.',
+    #         DeprecationWarning,
+    #         stacklevel=1,
+    #     )
+    # __asyncio.set_event_loop_policy(EventLoopPolicy())
 
 
 if _typing.TYPE_CHECKING:
